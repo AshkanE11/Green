@@ -1,0 +1,699 @@
+
+@font-face {
+
+    src: url("Files/Fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf") ;
+
+}
+@font-face {
+
+    src: url("Files/Fonts/Lily_Script_One/LilyScriptOne-Regular.ttf") ;
+
+}
+@font-face {
+    src: url("Files/Fonts/Raleway/Raleway-ExtraLightItalic.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Roboto/Roboto-Thin.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Sacramento/Sacramento-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Pacifico/Pacifico-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Leckerli_One/LeckerliOne-Regular.ttf") ;
+}
+
+
+
+.root {
+
+    -fx-background-color: white;
+
+}
+
+
+
+
+
+
+.mainlogodisplay {
+
+    -fx-translate-y: -300px;
+
+}
+
+
+
+.menubutton {
+
+    -fx-background-radius: 30px 30px 30px 30px;
+    -fx-translate-x: -530px;
+    -fx-translate-y: -300px;
+    -fx-max-width: 60px;
+    -fx-min-height: 40px;
+    -fx-background-color: #5D6AFF;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-text-fill: #40e6b8;
+    -fx-font-size: 20px;
+
+}
+
+.menubutton:hover {
+
+    -fx-background-color: #34ebb8;
+    -fx-text-fill: #5D6AFF;
+
+}
+
+
+.exitbutton {
+
+
+
+    -fx-background-radius: none;
+    -fx-translate-x:  570px;
+    -fx-translate-y: -320px;
+    -fx-max-width: 60px;
+    -fx-min-height: 60px;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+
+}
+
+.exitbutton:hover {
+
+    -fx-background-color: #6c7ce0;
+
+}
+
+.minimizebutton {
+
+
+    -fx-background-radius: none;
+    -fx-translate-x:  510px;
+    -fx-translate-y: -320px;
+    -fx-max-width: 60px;
+    -fx-min-height: 60px;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+}
+
+.minimizebutton:hover {
+
+    -fx-background-color: #6c7ce0;
+
+}
+
+
+
+
+/* General ONE Is Here !!! */
+
+
+
+
+
+.general1 {
+
+
+
+    -fx-max-width: 350px;
+    -fx-max-height: 200px;
+    -fx-background-color: #5D6AFF;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-translate-x: -250px;
+    -fx-translate-y: -70px;
+
+
+
+
+}
+
+
+
+.general1label1 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general1label2 {
+
+
+    -fx-translate-x: -70px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general1label3 {
+
+
+    -fx-translate-x: 60px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general1label4 {
+
+
+    -fx-translate-x:  30px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+
+
+
+/* General TWO Is Here !!! */
+
+
+
+
+.general2 {
+
+
+
+    -fx-max-width: 350px;
+    -fx-max-height: 200px;
+    -fx-background-color: #5D6AFF;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-translate-x:  250px;
+    -fx-translate-y: -70px;
+
+
+
+
+}
+
+
+
+.general2label1 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general2label2 {
+
+
+    -fx-translate-x: -110px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general2label3 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general2label4 {
+
+
+    -fx-translate-x:  -10px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+
+
+/* General THREE Is Here !!! */
+
+
+
+
+.general3 {
+
+
+
+    -fx-max-width: 350px;
+    -fx-max-height: 200px;
+    -fx-background-color: #5D6AFF;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44 , 99), 5, 0, 2, 0);
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-translate-x:  -250px;
+    -fx-translate-y:  180px;
+
+
+
+
+}
+
+
+
+.general3label1 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general3label2 {
+
+
+    -fx-translate-x: -90px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general3label3 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general3label4 {
+
+
+    -fx-translate-x:  -10px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+
+
+
+/* General THREE Is Here !!! */
+
+
+
+
+.general4 {
+
+
+
+    -fx-max-width: 350px;
+    -fx-max-height: 200px;
+    -fx-background-color: #5D6AFF;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-translate-x:  250px;
+    -fx-translate-y:  180px;
+
+
+
+
+}
+
+
+
+.general4label1 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general4label2 {
+
+
+    -fx-translate-x: -115px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general4label3 {
+
+
+    -fx-translate-x: 20px;
+    -fx-translate-y: 20px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+.general4label4 {
+
+
+    -fx-translate-x:  -10px;
+    -fx-translate-y: 140px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #4affcd;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* NavigationBar HERE !!!!!!!!!!!!!!    *****************************************************************    */
+
+
+
+.MenuRoot {
+
+
+
+
+}
+
+
+.menubar {
+
+    -fx-background-color: #4affcd;
+    -fx-min-width: 300px;
+    -fx-effect: dropshadow(three-pass-box, rgb(51, 93, 85), 100, 0, 30, 100);
+
+}
+
+
+/* MENUBAR ITEMS */
+
+
+
+
+
+.mainlogomenubardisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 200px;
+
+
+
+}
+
+
+
+
+.backbutton-menubar {
+
+
+    -fx-translate-x: 240px;
+    -fx-translate-y: -590px;
+    -fx-background-color: transparent;
+    -fx-min-width:  50px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+
+
+
+.homebutton-menubar {
+
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.homebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.factorbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.factorbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.orderbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-max-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.orderbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.bankbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.bankbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.portablebutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.portablebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.securitybutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.securitybutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+
+.settingsbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.settingsbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.morebutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.morebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+

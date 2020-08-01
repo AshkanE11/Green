@@ -1,0 +1,136 @@
+
+
+
+
+
+
+@font-face {
+
+    src: url("Files/Fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf") ;
+
+}
+@font-face {
+
+    src: url("Files/Fonts/Lily_Script_One/LilyScriptOne-Regular.ttf") ;
+
+}
+@font-face {
+    src: url("Files/Fonts/Raleway/Raleway-ExtraLightItalic.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Roboto/Roboto-Thin.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Sacramento/Sacramento-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Pacifico/Pacifico-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Leckerli_One/LeckerliOne-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Bangers/Bangers-Regular.ttf") ;
+}
+
+
+
+
+
+
+
+
+
+
+.mininavdisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: -180px;
+
+
+
+}
+
+
+
+
+.exitbuttonmini {
+
+
+
+    -fx-background-radius: none;
+    -fx-translate-x: 175px;
+    -fx-translate-y: -175px;
+    -fx-max-width: 10px;
+    -fx-min-height: 10px;
+    -fx-background-color: #4458BE;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+
+}
+
+
+.minimizebuttonmini {
+
+
+    -fx-background-radius: none;
+    -fx-translate-x:  130px;
+    -fx-translate-y: -175px;
+    -fx-max-width: 10px;
+    -fx-min-height: 10px;
+    -fx-background-color: #4458BE;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+}
+
+
+.printerslist {
+
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 35px;
+    -fx-max-width: 300px;
+    -fx-max-height: 200px;
+    -fx-background-color: #5B6AF7;
+    -fx-fill: #4affcd;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+
+
+}
+
+
+
+.printerslist .cell {
+
+
+    -fx-background-color: #5B6AF7;
+
+
+}
+
+
+
+.startprinting {
+
+
+
+    -fx-translate-x: 150px;
+    -fx-translate-y: 170px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 10px;
+    -fx-text-fill: #4affcd;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 10, 0, 0, 0);
+    -fx-background-radius: 8px 8px 8px 8px;
+
+
+
+
+}

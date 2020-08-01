@@ -1,0 +1,173 @@
+@font-face {
+
+    src: url("Files/Fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf") ;
+
+}
+@font-face {
+
+    src: url("Files/Fonts/Lily_Script_One/LilyScriptOne-Regular.ttf") ;
+
+}
+@font-face {
+    src: url("Files/Fonts/Raleway/Raleway-ExtraLightItalic.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Roboto/Roboto-Thin.ttf") ;
+}
+
+.root {
+
+
+    -fx-background-color: #00B07F;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+}
+
+
+.text1 {
+
+    -fx-translate-x: -400px;
+    -fx-translate-y: -300px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 65px;
+    -fx-text-fill: white;
+
+
+}
+
+.text2 {
+
+    -fx-translate-x: -350px;
+    -fx-translate-y: 300px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 40px;
+    -fx-text-fill: white;
+
+
+}
+
+.text3 {
+
+
+
+    -fx-translate-x: 390px;
+    -fx-translate-y: -150px;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+}
+
+
+.text4 {
+
+
+    -fx-translate-x: 350px;
+    -fx-translate-y: 150px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+
+}
+
+.text5 {
+
+
+    -fx-translate-x: 450px;
+    -fx-translate-y: 150px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+
+
+}
+
+.usernametxtfield {
+
+
+    -fx-translate-x: 390px;
+    -fx-translate-y: -50;
+    -fx-max-width: 350;
+    -fx-min-height: 45;
+    -fx-background-radius: 8px 8px 8px 8px;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-background-color: -fx-control-inner-background ;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+
+}
+
+
+
+.passwordtxtfield {
+
+    -fx-translate-x: 390px;
+    -fx-translate-y:  20px;
+    -fx-max-width: 350;
+    -fx-min-height: 45;
+    -fx-background-radius: 8px 8px 8px 8px;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-background-color: -fx-control-inner-background ;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+
+}
+
+.loginbutton {
+
+
+
+    -fx-translate-x: 390px;
+    -fx-translate-y: 100px;
+    -fx-max-width: 350;
+    -fx-max-height: 20;
+    -fx-font-size: 25px;
+    -fx-background-radius: 12px 12px 12px 12px;
+    -fx-background-color: -fx-control-inner-background ;
+    -fx-font-family: 'Lily Script One', cursive ;
+    -fx-text-fill: #00B07F;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+
+}
+
+.loginbutton:hover {
+
+    -fx-background-color: #00B07F;
+    -fx-text-fill: white;
+
+
+
+}
+
+.imagedisplay {
+
+
+    -fx-translate-x: -230px;
+    -fx-translate-y: 0px;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

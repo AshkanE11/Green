@@ -1,0 +1,490 @@
+@font-face {
+
+    src: url("Files/Fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf") ;
+
+}
+@font-face {
+
+    src: url("Files/Fonts/Lily_Script_One/LilyScriptOne-Regular.ttf") ;
+
+}
+@font-face {
+    src: url("Files/Fonts/Raleway/Raleway-ExtraLightItalic.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Roboto/Roboto-Thin.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Sacramento/Sacramento-Regular.ttf") ;
+}
+
+
+/* ************************************ SCENE ONE ************************************ */
+
+.root1 {
+
+
+    -fx-background-color: white;
+
+
+
+}
+
+
+
+
+.scene1txt {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: -250px;
+    -fx-font-size: 80px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Sacramento', cursive;
+
+
+
+}
+
+.scene1txt2 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 210px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene1txt3 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 240px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene1txt4 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 270px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene1txt5 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 300px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+
+.scene1imagedisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 0px;
+
+
+
+}
+
+.scene1imagelogodisplay {
+
+    -fx-translate-x: -550px;
+    -fx-translate-y: -300px;
+
+
+}
+
+
+.scene1rightbutton {
+
+
+    -fx-translate-x: 580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+}
+
+
+
+/* ************************************ SCENE TWO ************************************ */
+
+
+.root2 {
+
+
+    -fx-background-color: white;
+
+
+}
+
+
+
+
+.scene2txt {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: -250px;
+    -fx-font-size: 80px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Sacramento', cursive;
+
+
+}
+
+.scene2txt2 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 210px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene2txt3 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 240px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene2txt4 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 270px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene2txt5 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 300px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+
+.scene2imagedisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 0px;
+
+
+
+}
+
+.scene2logodisplay {
+
+    -fx-translate-x: -550px;
+    -fx-translate-y: -300px;
+
+
+}
+
+
+.scene2rightbutton {
+
+
+    -fx-translate-x: 580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+}
+
+.scene2leftbutton {
+
+
+    -fx-translate-x: -580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+}
+
+
+/* ************************************ SCENE THREE ************************************ */
+
+
+.root3 {
+
+
+    -fx-background-color: white;
+
+
+
+}
+
+
+
+
+.scene3txt {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: -250px;
+    -fx-font-size: 80px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Sacramento', cursive;
+
+
+}
+
+.scene3txt2 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 210px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene3txt3 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 240px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene3txt4 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 270px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+.scene3txt5 {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 300px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #333 ;
+    -fx-font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+
+.scene3imagedisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 0px;
+
+
+
+}
+
+
+.scene3logodisplay {
+
+
+    -fx-translate-x: -550px;
+    -fx-translate-y: -300px;
+
+
+}
+
+
+.scene3rightbutton {
+
+
+    -fx-translate-x: 580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+}
+
+.scene3leftbutton {
+
+
+    -fx-translate-x: -580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+}
+
+
+
+
+/* ************************************ SCENE FOUR ************************************ */
+
+
+
+.root4 {
+
+
+    -fx-background-color: white;
+
+
+
+}
+
+
+
+
+.scene4txt {
+
+
+    -fx-translate-x: -250px;
+    -fx-translate-y: -220px;
+    -fx-font-size: 60px;
+    -fx-text-fill: #00B07F ;
+    -fx-font-family: 'Lily Script One', cursive;
+
+}
+
+.scene4imagedisplay {
+
+
+    -fx-translate-x: 100px;
+    -fx-translate-y: 50px;
+
+
+
+}
+
+
+
+.scene4leftbutton {
+
+
+    -fx-translate-x: -580px;
+    -fx-translate-y: 0px;
+    -fx-max-width: 50px;
+    -fx-min-height: 50px;
+    -fx-background-color: white;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-font-size: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+}
+
+.startbutton {
+
+
+    -fx-translate-x: -215px;
+    -fx-translate-y: -80px;
+    -fx-max-width: 350;
+    -fx-max-height: 20;
+    -fx-font-size: 25px;
+    -fx-background-radius: 12px 12px 12px 12px;
+    -fx-background-color: -fx-control-inner-background ;
+    -fx-font-family: 'Lily Script One', cursive ;
+    -fx-text-fill: #00B07F;
+    -fx-effect: dropshadow(three-pass-box, rgb(95, 95, 95), 13, 0, 0, 0);
+
+
+
+}
+
+.startbutton:hover {
+
+    -fx-background-color: #00B07F;
+    -fx-text-fill: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

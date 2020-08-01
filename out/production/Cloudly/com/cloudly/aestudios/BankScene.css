@@ -1,0 +1,657 @@
+
+
+@font-face {
+
+    src: url("Files/Fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf") ;
+
+}
+@font-face {
+
+    src: url("Files/Fonts/Lily_Script_One/LilyScriptOne-Regular.ttf") ;
+
+}
+@font-face {
+    src: url("Files/Fonts/Raleway/Raleway-ExtraLightItalic.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Roboto/Roboto-Thin.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Sacramento/Sacramento-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Pacifico/Pacifico-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Leckerli_One/LeckerliOne-Regular.ttf") ;
+}
+@font-face {
+    src: url("Files/Fonts/Bangers/Bangers-Regular.ttf") ;
+}
+
+
+
+
+/* ROOT ITEMS HERE !!!!!!!!!!!!!!! */
+
+
+
+
+
+
+.mainbackgrounddisplay {
+
+
+
+
+
+
+}
+
+
+.mainlogodisplay {
+
+    -fx-translate-y: -300px;
+
+}
+
+
+
+.menubutton {
+
+    -fx-background-radius: 30px 30px 30px 30px;
+    -fx-translate-x: -530px;
+    -fx-translate-y: -300px;
+    -fx-max-width: 60px;
+    -fx-min-height: 40px;
+    -fx-background-color: #5D6AFF;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-effect: dropshadow(three-pass-box, rgb(42, 44, 99), 5, 0, 2, 0);
+    -fx-font-family: 'Lily Script One', cursive;
+    -fx-text-fill: #40e6b8;
+    -fx-font-size: 20px;
+
+}
+
+.menubutton:hover {
+
+    -fx-background-color: #34ebb8;
+    -fx-text-fill: #5D6AFF;
+
+}
+
+
+.exitbutton {
+
+
+
+    -fx-background-radius: none;
+    -fx-translate-x:  570px;
+    -fx-translate-y: -320px;
+    -fx-max-width: 60px;
+    -fx-min-height: 60px;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+
+}
+
+.exitbutton:hover {
+
+    -fx-background-color: #6c7ce0;
+
+}
+
+.minimizebutton {
+
+
+    -fx-background-radius: none;
+    -fx-translate-x:  510px;
+    -fx-translate-y: -320px;
+    -fx-max-width: 60px;
+    -fx-min-height: 60px;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+
+
+}
+
+.minimizebutton:hover {
+
+    -fx-background-color: #6c7ce0;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* NavigationBar HERE !!!!!!!!!!!!!!    *****************************************************************    */
+
+
+
+.MenuRoot {
+
+
+
+
+}
+
+
+.menubar {
+
+    -fx-background-color: #4affcd;
+    -fx-min-width: 300px;
+    -fx-effect: dropshadow(three-pass-box, rgb(51, 93, 85), 100, 0, 30, 100);
+
+}
+
+
+/* MENUBAR ITEMS */
+
+
+
+
+
+.mainlogomenubardisplay {
+
+
+    -fx-translate-x: 0px;
+    -fx-translate-y: 200px;
+
+
+
+}
+
+
+
+
+.backbutton-menubar {
+
+
+    -fx-translate-x: 240px;
+    -fx-translate-y: -590px;
+    -fx-background-color: transparent;
+    -fx-min-width:  50px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+
+
+
+.homebutton-menubar {
+
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.homebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.factorbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.factorbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.orderbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-max-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.orderbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.bankbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.bankbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.portablebutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.portablebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.securitybutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.securitybutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+
+.settingsbutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.settingsbutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+.morebutton-menubar {
+
+
+    -fx-translate-y: -400px;
+    -fx-background-color: transparent;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20px;
+    -fx-control-inner: -fx-background-color ;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-text-fill: #5B6AF7;
+    -fx-border-radius: none;
+    -fx-background-radius: none;
+
+
+}
+
+.morebutton-menubar:hover {
+
+    -fx-background-color: #95B6FF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  CHEQUE SCENE DESIGN  */
+
+
+
+.chequedatenum {
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  -200px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 200px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
+
+
+
+}
+
+
+.chequedatechar {
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  -100px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 200px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
+
+
+
+}
+
+
+.chequeamount {
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  0px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 200px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
+
+
+
+}
+
+
+.chequeamountchar {
+
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  100px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 200px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
+
+
+
+}
+
+
+.chequeperson {
+
+
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  200px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 200px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
+
+
+
+
+}
+
+
+.chequeshow {
+
+    -fx-translate-x: -180px;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 10, 0, 0, 0);
+
+
+}
+
+.finishbutton {
+
+
+    -fx-translate-x:  420px;
+    -fx-translate-y:  300px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 20px;
+    -fx-text-fill: #4affcd;
+    -fx-background-color: #5B6AF7;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 10, 0, 0, 0);
+    -fx-background-radius: 8px 8px 8px 8px;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Cheque Labels */
+
+
+
+.datenumlabel1 {
+
+
+    -fx-translate-x:  60px;
+    -fx-translate-y: -150px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+
+
+
+
+}
+
+.datecharlabel1 {
+
+    -fx-translate-x:  20px;
+    -fx-translate-y: -120px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+
+
+
+
+}
+
+
+.amountnumlabel1 {
+
+
+    -fx-translate-x: -400px;
+    -fx-translate-y: -85px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+
+
+
+
+
+}
+
+
+.amountcharlabel1 {
+
+    -fx-translate-x: -100px ;
+    -fx-translate-y: -40px ;
+    -fx-font-family: 'Julius Sans One', sans-serif ;
+    -fx-font-size: 15px ;
+    -fx-text-fill: black ;
+
+
+
+
+}
+
+
+
+.personlabel1 {
+
+
+
+    -fx-translate-x: 50px ;
+    -fx-translate-y: 20px ;
+    -fx-font-family: 'Julius Sans One', sans-serif ;
+    -fx-font-size: 15px ;
+    -fx-text-fill: black ;
+
+
+
+}
+
+
+.printbutton {
+
+
+    -fx-translate-x: 170px;
+    -fx-translate-y: 240px;
+    -fx-background-color: #5B6AF7;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-control-inner-background: -fx-background-color ;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 10, 0, 0, 0);
+    -fx-background-radius: 8px 8px 8px 8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
