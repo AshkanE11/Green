@@ -24,20 +24,20 @@ which wants to get more widely and extensively acquainted by their business stat
 
 # Featuring
 
--- Page Instructs &&& Hints
--- Source Based Login Form
--- Items &&& Customers Organizing
--- Printing Cart Items
--- Cheque Organizer &&& Scheduler
+-- Page Instructs &&& Hints </br>
+-- Source Based Login Form </br>
+-- Items &&& Customers Organizing </br>
+-- Printing Cart Items </br>
+-- Cheque Organizer &&& Scheduler </br>
 
 # Tools
 
-! Java8
-! JDK8
-! CSS
-! Printer
+! Java8 </br>
+! JDK8 </br>
+! CSS </br>
+! Printer </br>
 
 # Login
 
-*** Username: Boss
-*** Password: Boss
+*** Username: Boss </br>
+*** Password: Boss </br>
