@@ -68,6 +68,5 @@ Password: Boss </br>
 
 # Development
 
-
-<div align=”center”> Developed With By Ashkan Ebtekari </div>
+->Developed With ![Header](LOVE.png)  By Ashkan Ebtekari<-
 
