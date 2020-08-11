@@ -19,3 +19,25 @@ which wants to get more widely and extensively acquainted by their business stat
 </br>
 
 ![Header](login.png)
+
+</br>
+
+# Featuring
+
+-- Page Instructs &&& Hints
+-- Source Based Login Form
+-- Items &&& Customers Organizing
+-- Printing Cart Items
+-- Cheque Organizer &&& Scheduler
+
+# Tools
+
+! Java8
+! JDK8
+! CSS
+! Printer
+
+# Login
+
+*** Username: Boss
+*** Password: Boss
