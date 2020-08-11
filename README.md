@@ -58,10 +58,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Credentials
 
-^ Java8 </br>
-^ JDK8 </br>
-^ CSS </br>
-^ Printer </br>
+Used Java8 &&& JDK8 For Development &&& CSS Styling Without Any Usage of XML ...
 
-*** Username: Boss </br>
-*** Password: Boss </br>
+Username And Password For Login Attempt :
+
+Username: Boss </br>
+Password: Boss </br>
