@@ -32,7 +32,7 @@ which wants to get more widely and extensively acquainted by their business stat
 
 # Disclaimer
 
-Evil Limiter is provided by bitbrute "as is" and "with all faults". The provider makes no representations or warranties of any kind concerning
+Green is provided by Ashkan Ebtekari "as is" and "with all faults". The provider makes no representations or warranties of any kind concerning
 the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this software.
 There are inherent dangers in the use of any
 software, and you are solely responsible for determining whether Green is compatible with your equipment and other software installed on your equipment.
