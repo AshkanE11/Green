@@ -45,7 +45,7 @@ public class MoreScene extends Application {
         Label deslbl5 = new Label("ashkanebtekari@gmail.com") ;
         Label deslbl6 = new Label("+1 3609481143") ;
         Label deslbl7 = new Label("Ashkan Ebtekari") ;
-        Image icecream = new Image("File:src\\com\\cloudly\\aestudios\\Files\\Background\\popsicle.png") ;
+        Image icecream = new Image("com//cloudly//aestudios//Files//Background//popsicle.png") ;
         ImageView icecreamshow = new ImageView(icecream) ;
         icecreamshow.setFitWidth(400);
         icecreamshow.setFitHeight(400);

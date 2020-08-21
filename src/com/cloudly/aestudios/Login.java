@@ -133,13 +133,18 @@ public class Login extends Application {
 
 
 
-             MainApp mainApp = new MainApp() ;
-
-
-             mainApp.start(InfoStage);
+             if (usernamecheck.equals("Boss") && passwordcheck.equals("Boss")) {
 
 
 
+                 MainApp mainApp = new MainApp() ;
+
+
+                 mainApp.start(InfoStage);
+
+
+
+             }
 
 
 
