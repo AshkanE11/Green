@@ -273,7 +273,16 @@ public class MoreScene extends Application {
 
 
 
+        homebutton.setOnAction(e -> {
 
+
+            MainApp mainApp = new MainApp() ;
+
+            mainApp.start(MainStage);
+
+
+
+        });
 
 
 

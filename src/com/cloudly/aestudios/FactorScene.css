@@ -715,6 +715,21 @@
 
 
 
+
+
+.errLbl {
+
+
+    -fx-translate-x: -100px;
+    -fx-translate-y: 80px;
+    -fx-text-fill: lightcoral;
+    -fx-font-size: 15px;
+
+
+}
+
+
+
 /* MINI TWO HERE !!!!!!!!!!!!!!!!!!! */
 
 

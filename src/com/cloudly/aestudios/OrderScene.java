@@ -308,6 +308,19 @@ public class OrderScene extends Application {
 
 
 
+        homebutton.setOnAction(e -> {
+
+
+            MainApp mainApp = new MainApp() ;
+
+            mainApp.start(MainStage);
+
+
+
+        });
+
+
+
 
 
         factorbutton.setOnAction(e -> {

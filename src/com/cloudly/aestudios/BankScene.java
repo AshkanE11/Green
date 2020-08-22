@@ -421,8 +421,16 @@ public class BankScene extends Application {
 
 
 
+        homebutton.setOnAction(e -> {
 
 
+            MainApp mainApp = new MainApp() ;
+
+            mainApp.start(MainStage);
+
+
+
+        });
 
 
         orderbutton.setOnAction(e -> {
@@ -434,6 +442,8 @@ public class BankScene extends Application {
 
         });
 
+
+
         factorbutton.setOnAction(e -> {
 
             FactorScene factorScene = new FactorScene() ;
@@ -444,6 +454,8 @@ public class BankScene extends Application {
 
         });
 
+
+
         bankbutton.setOnAction(e -> {
 
             BankScene bankScene = new BankScene() ;
@@ -452,6 +464,7 @@ public class BankScene extends Application {
 
 
         });
+
 
 
         morebutton.setOnAction(e -> {

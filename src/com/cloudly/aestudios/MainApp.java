@@ -25,6 +25,16 @@ public class MainApp extends Application {
     private static double xOffset = 0;
     private static double yOffset = 0;
 
+    FactorScene factorScene = new FactorScene() ;
+
+    public FactorScene getFactorScene() {
+        return factorScene;
+    }
+
+    public void setFactorScene(FactorScene factorScene) {
+        this.factorScene = factorScene;
+    }
+
 
     @Override
     public void start(Stage InfoStage) {
@@ -67,9 +77,14 @@ public class MainApp extends Application {
 
         Label general2label1 = new Label("Factors") ;
         Label general2label2 = new Label("Value") ;
-        Label general2label3 = new Label("0") ;
+        Label general2label3 = new Label() ;
         Label general2label4 = new Label("$" + "0") ;
         HBox general2 = new HBox(general2label1 , general2label2 , general2label3 , general2label4) ;
+
+
+
+        general1label3.setText(String.valueOf(factorScene.factorcounter));
+
 
 
 
@@ -307,6 +322,10 @@ public class MainApp extends Application {
 
 
         // SCENE CHANGER HERE !!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
 
 
         factorbutton.setOnAction(e -> {

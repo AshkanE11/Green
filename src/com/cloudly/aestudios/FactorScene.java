@@ -1,6 +1,7 @@
 package com.cloudly.aestudios ;
 
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -50,6 +51,8 @@ public class FactorScene extends Application {
     public TableView customertable = new TableView() ;
 
 
+
+    int itemcounter , factorcounter , customercounter ;
 
 
 
@@ -299,6 +302,17 @@ public class FactorScene extends Application {
 
 
 
+        homebutton.setOnAction(e -> {
+
+
+            MainApp mainApp = new MainApp() ;
+
+            mainApp.start(MainStage);
+
+
+
+        });
+
 
 
         orderbutton.setOnAction(e -> {
@@ -518,6 +532,7 @@ public class FactorScene extends Application {
                 ImageView loveshow = new ImageView(loveicon) ;
                 loveshow.setFitWidth(200);
                 loveshow.setFitHeight(200);
+                Label errLbl = new Label("Complete the Form !!!") ;
 
 
 
@@ -540,6 +555,7 @@ public class FactorScene extends Application {
                 txtlabel2.getStyleClass().add("txtlabel2") ;
                 confirmbutton.getStyleClass().add("confirmbutton") ;
                 loveshow.getStyleClass().add("loveshow") ;
+                errLbl.getStyleClass().add("errLbl") ;
 
 
 
@@ -564,25 +580,25 @@ public class FactorScene extends Application {
 
 
 
+                    confirmbutton.setOnAction(e -> {
 
 
+                        additemname = productname.getText().toString();
+                        additemprice = dollarsign + productprice.getText().toString();
 
 
-                        confirmbutton.setOnAction(e -> {
+                        searchresults.getItems().addAll(new SearchResults(additemname, additemprice));
 
 
-                            additemname = productname.getText().toString() ;
-                            additemprice = dollarsign + productprice.getText().toString() ;
-                            searchresults.getItems().addAll(new SearchResults(additemname , additemprice)) ;
+                        itemcounter++;
 
 
+                        additemstage.close();
 
 
+                    });
 
-                            additemstage.close();
 
-
-                        });
 
 
 
@@ -788,6 +804,18 @@ public class FactorScene extends Application {
                         });
 
 
+
+                        confirmbutton2.setOnAction(e -> {
+
+
+
+
+                            factorcounter ++ ;
+
+
+
+
+                        });
 
 
                         cartitems.getStyleClass().add("cartitems") ;
@@ -1006,6 +1034,8 @@ public class FactorScene extends Application {
 
 
 
+
+
                         fname = customerfname.getText().toString() ;
                         lname = customerlname.getText().toString() ;
                         phone = customerphone.getText().toString() ;
@@ -1023,6 +1053,7 @@ public class FactorScene extends Application {
                         customerphone.setText(null);
                         customeradress.setText(null);
 
+                        customercounter ++ ;
 
                     }
                 });
@@ -1117,10 +1148,7 @@ public class FactorScene extends Application {
         public String ItemPrice = null ;
         public Button AddCartButton , PlusCountButton , MinisCountButton;
         public Label NumInfoLabel1 ;
-        public Label CountInfoLabel ;
-        public String Item ;
-        public int Price ;
-        public int Count ;
+
 
         public int addone = 1 ;
 
