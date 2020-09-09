@@ -5,6 +5,8 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -808,11 +810,10 @@ public class FactorScene extends Application {
                         confirmbutton2.setOnAction(e -> {
 
 
-
-
+                            ObservableList<String> fakeOb = FXCollections.observableArrayList() ;
+                            cartitems.setItems(fakeOb);
+                            makefactorstage.close();
                             factorcounter ++ ;
-
-
 
 
                         });
