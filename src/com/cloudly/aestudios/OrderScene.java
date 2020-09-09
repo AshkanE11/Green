@@ -7,10 +7,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -33,7 +31,7 @@ public class OrderScene extends Application {
 
     public TableView searchresults = new TableView() ;
     public TableView cartitems = new TableView() ;
-    public TableView customertable = new TableView() ;
+    public TableView bikertable = new TableView() ;
 
 
 
@@ -71,6 +69,37 @@ public class OrderScene extends Application {
 
 
 
+
+
+        // CUSTOMERTABLE TABLE COLUMNS AND PREFRENCES FOR FACTOR MAKING !!!!!!!!!!!*************!!!!!!!!!!!!!!!!!!!******************!!!!!!!!!!*********
+
+
+
+
+
+        TableColumn<String , FactorScene.SearchResults> customercolumn1 = new TableColumn<>("First") ;
+        TableColumn<String , FactorScene.SearchResults> customercolumn2 = new TableColumn<>("Last") ;
+        TableColumn<String , FactorScene.SearchResults> customercolumn3 = new TableColumn<>("Phone") ;
+        TableColumn<String , FactorScene.SearchResults> customercolumn4 = new TableColumn<>("Adress") ;
+        customercolumn1.setCellValueFactory(new PropertyValueFactory<>("First"));
+        customercolumn2.setCellValueFactory(new PropertyValueFactory<>("Last"));
+        customercolumn3.setCellValueFactory(new PropertyValueFactory<>("Phone"));
+        customercolumn4.setCellValueFactory(new PropertyValueFactory<>("Adress"));
+        customercolumn1.setMinWidth(100);
+        customercolumn2.setMinWidth(100);
+        customercolumn3.setMinWidth(150);
+        customercolumn4.setMinWidth(300);
+
+
+
+        bikertable.getColumns().addAll(customercolumn1 , customercolumn2 , customercolumn3 , customercolumn4) ;
+        bikertable.setPlaceholder(new Label("No Bikers"));
+
+
+
+
+
+
         // GENERAL1 HERE !!!
 
         Label general1label = new Label("Items") ;
@@ -96,7 +125,7 @@ public class OrderScene extends Application {
 
         // GENERAL3 HERE !!!
 
-        Label general3label = new Label("Clients") ;
+        Label general3label = new Label("Bikers") ;
         Image icon3 = new Image("com//cloudly//aestudios//Files//Background//ordergeneral3icon.png") ;
         ImageView general3icon = new ImageView(icon3) ;
         general3icon.setFitWidth(100);
@@ -758,21 +787,21 @@ public class OrderScene extends Application {
                 Button minimizebutton = new Button() ;
                 exitbutton.setGraphic(new ImageView(exticon));
                 minimizebutton.setGraphic(new ImageView(mnimzeicon));
-                Label topiclabel = new Label("Clients Form") ;
-                Label infolabel = new Label("New Customer") ;
+                Label topiclabel = new Label("Bikers Form") ;
+                Label infolabel = new Label("New Biker") ;
                 Label deslabel1 = new Label("FirstName:") ;
                 Label deslabel2 = new Label("LastName:") ;
                 Label deslabel3 = new Label("Phone:") ;
                 Label deslabel4 = new Label("Adress:") ;
-                TextField customerfname = new TextField() ;
-                TextField customerlname = new TextField() ;
-                TextField customerphone = new TextField() ;
-                TextField customeradress = new TextField() ;
+                TextField bikerfname = new TextField() ;
+                TextField bikerlname = new TextField() ;
+                TextField bikerphone = new TextField() ;
+                TextField bikeradress = new TextField() ;
                 Button donebutton = new Button("Confirm") ;
-                customerfname.setPromptText("FirstName");
-                customerlname.setPromptText("LastName");
-                customerphone.setPromptText("Phone");
-                customeradress.setPromptText("Adress");
+                bikerfname.setPromptText("FirstName");
+                bikerlname.setPromptText("LastName");
+                bikerphone.setPromptText("Phone");
+                bikeradress.setPromptText("Adress");
 
 
 
@@ -781,7 +810,7 @@ public class OrderScene extends Application {
 
 
                 StackPane ministackpane = new StackPane() ;
-                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , customerfname , customerlname , customerphone , customeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , customertable) ;
+                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , bikerfname , bikerlname , bikerphone , bikeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , bikertable) ;
 
 
 
@@ -791,16 +820,16 @@ public class OrderScene extends Application {
                 minimizebutton.getStyleClass().add("minimizebuttonmini2") ;
                 topiclabel.getStyleClass().add("topiclabel2") ;
                 infolabel.getStyleClass().add("infolabel") ;
-                customerfname.getStyleClass().add("customerfname") ;
-                customerlname.getStyleClass().add("customerlname") ;
-                customerphone.getStyleClass().add("customerphone") ;
-                customeradress.getStyleClass().add("customeradress") ;
+                bikerfname.getStyleClass().add("customerfname") ;
+                bikerlname.getStyleClass().add("customerlname") ;
+                bikerphone.getStyleClass().add("customerphone") ;
+                bikeradress.getStyleClass().add("customeradress") ;
                 donebutton.getStyleClass().add("donebutton") ;
                 deslabel1.getStyleClass().add("deslabel1") ;
                 deslabel2.getStyleClass().add("deslabel2") ;
                 deslabel3.getStyleClass().add("deslabel3") ;
                 deslabel4.getStyleClass().add("deslabel4") ;
-                customertable.getStyleClass().add("customertable") ;
+                bikertable.getStyleClass().add("customertable") ;
 
 
 
@@ -823,7 +852,7 @@ public class OrderScene extends Application {
 
 
 
-                // EVENT  HANDELERS HEREEEEEEEEEEEEEEEEEE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+                // EVENT  HANDELERS HEREEEEEEEEEEEEEEEEEE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
@@ -834,22 +863,22 @@ public class OrderScene extends Application {
 
 
 
-                        fname = customerfname.getText().toString() ;
-                        lname = customerlname.getText().toString() ;
-                        phone = customerphone.getText().toString() ;
-                        adress = customeradress.getText().toString() ;
+                        fname = bikerfname.getText().toString() ;
+                        lname = bikerlname.getText().toString() ;
+                        phone = bikerphone.getText().toString() ;
+                        adress = bikeradress.getText().toString() ;
 
 
 
 
-                        customertable.getItems().add(new CustomerTable(fname , lname , phone , adress)) ;
+                        bikertable.getItems().add(new CustomerTable(fname , lname , phone , adress)) ;
 
 
 
-                        customerfname.setText(null);
-                        customerlname.setText(null);
-                        customerphone.setText(null);
-                        customeradress.setText(null);
+                        bikerfname.setText(null);
+                        bikerlname.setText(null);
+                        bikerphone.setText(null);
+                        bikeradress.setText(null);
 
 
                     }
