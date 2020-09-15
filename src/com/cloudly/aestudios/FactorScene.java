@@ -8,6 +8,8 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.print.Printer;
@@ -40,10 +42,11 @@ public class FactorScene extends Application {
 
     private static double xOffset = 0;
     private static double yOffset = 0;
-    public String additemname , additemprice;
+    public String additemname , additemprice , additemname2 , additemprice2 ;
     public String dollarsign = "$" ;
     public Label itemshow , priceshow ;
     public TextField countshow ;
+    public TextField searchbar = new TextField() ;
 
 
 
@@ -53,8 +56,13 @@ public class FactorScene extends Application {
     public TableView customertable = new TableView() ;
 
 
+    ObservableList<String> getoni = FXCollections.observableArrayList() ;
+    ObservableList<CustomerTable> customerclone = FXCollections.observableArrayList() ;
+
 
     int itemcounter , factorcounter , customercounter ;
+
+    String searchedCustomer ;
 
 
 
@@ -391,6 +399,9 @@ public class FactorScene extends Application {
 
 
 
+
+
+
         searchresults.getColumns().addAll(namecolumn , pricecolumn , buttoncolumn1 , buttoncolumn2 , buttoncolumn3 , buttoncolumn4 , buttoncolumn5) ;
         searchresults.setPlaceholder(new Label("No Items Added"));
 
@@ -576,7 +587,15 @@ public class FactorScene extends Application {
 
 
 
-                
+
+
+
+
+
+
+
+
+
                 // ADD ITEM EVENT HANDELERS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**************************************************
 
 
@@ -589,20 +608,22 @@ public class FactorScene extends Application {
                         additemprice = dollarsign + productprice.getText().toString();
 
 
+                        additemname2 = productname.getText().toString() ;
+                        additemprice2 = dollarsign + productprice.getText().toString() ;
+
+
+
                         searchresults.getItems().addAll(new SearchResults(additemname, additemprice));
+                        getoni.addAll(additemname2 , additemprice2) ;
 
 
-                        itemcounter++;
+                        itemcounter ++;
 
 
                         additemstage.close();
 
 
                     });
-
-
-
-
 
 
 
@@ -698,7 +719,7 @@ public class FactorScene extends Application {
                 exitbutton.setGraphic(new ImageView(exticon));
                 minimizebutton.setGraphic(new ImageView(mnimzeicon));
                 Label topiclabel = new Label("Make Factor") ;
-                TextField searchbar = new TextField() ;
+                searchbar = new TextField() ;
                 searchbar.setPromptText("Search");
                 Button printbutton = new Button() ;
                 Button confirmbutton2 = new Button("Confirm") ;
@@ -938,6 +959,7 @@ public class FactorScene extends Application {
             private double xOffset = 0 ;
             private double yOffset = 0 ;
             String fname , lname , phone , adress ;
+            String fname2 , lname2 , phone2 , adress2 ;
 
             @Override
             public void handle(MouseEvent event) {
@@ -969,7 +991,9 @@ public class FactorScene extends Application {
                 TextField customerlname = new TextField() ;
                 TextField customerphone = new TextField() ;
                 TextField customeradress = new TextField() ;
+                TextField customersearchbar = new TextField() ;
                 Button donebutton = new Button("Confirm") ;
+                customersearchbar.setPromptText("Search");
                 customerfname.setPromptText("FirstName");
                 customerlname.setPromptText("LastName");
                 customerphone.setPromptText("Phone");
@@ -982,7 +1006,7 @@ public class FactorScene extends Application {
 
 
                 StackPane ministackpane = new StackPane() ;
-                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , customerfname , customerlname , customerphone , customeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , customertable) ;
+                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , customerfname , customerlname , customerphone , customeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , customertable , customersearchbar) ;
 
 
 
@@ -1002,6 +1026,7 @@ public class FactorScene extends Application {
                 deslabel3.getStyleClass().add("deslabel3") ;
                 deslabel4.getStyleClass().add("deslabel4") ;
                 customertable.getStyleClass().add("customertable") ;
+                customersearchbar.getStyleClass().add("customersearchbar") ;
 
 
 
@@ -1027,6 +1052,7 @@ public class FactorScene extends Application {
                 // EVENT  HANDELERS HEREEEEEEEEEEEEEEEEEE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
 
 
+                CustomerTable customerTable = new CustomerTable() ;
 
 
                 donebutton.setOnAction(new EventHandler<ActionEvent>() {
@@ -1045,8 +1071,11 @@ public class FactorScene extends Application {
 
 
 
-                        customertable.getItems().add(new CustomerTable(fname , lname , phone , adress)) ;
 
+                        CustomerTable customer = new CustomerTable(fname , lname , phone , adress) ;
+
+
+                        customerclone.addAll(customer) ;
 
 
                         customerfname.setText(null);
@@ -1056,8 +1085,87 @@ public class FactorScene extends Application {
 
                         customercounter ++ ;
 
+
+
+
+
+                        // Data Filtering
+                        FilteredList<CustomerTable> filteredData = new FilteredList(customerclone, b -> true);
+
+                        // SearchBar Listener
+                        customersearchbar.textProperty().addListener((observable, oldValue, newValue) -> {
+
+                            // FilterData Predicate
+                            filteredData.setPredicate(employee -> {
+
+
+                                // If FilterList is Empty Show All Items
+
+                                if (newValue == null || newValue.isEmpty()) {
+                                    return true;
+                                }
+
+
+
+                                // Comparing Cells Data
+
+
+                                // LowerCaser
+                                String lowerCaseFilter = newValue.toLowerCase();
+
+
+                                if (employee.getFirst().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // FirstName Match
+                                }
+
+
+                                else if (employee.getLast().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // LastName Match
+                                }
+
+
+                                else if (String.valueOf(employee.getPhone()).indexOf(lowerCaseFilter) != -1)
+                                    return true; //PhoneNumber Match
+
+
+                                else if (employee.getAdress().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // Adress Match
+                                }
+
+
+                                else
+                                    return false; // No Matches
+
+
+                            });
+                        });
+
+                        // Sort The FilteredData
+                        SortedList<CustomerTable> sortedData = new SortedList<>(filteredData);
+
+                        // Comparator
+                        sortedData.comparatorProperty().bind(customertable.comparatorProperty());
+
+
+
+                        // Finall Shot !!!
+                        customertable.setItems(sortedData);
+                        customertable.refresh();
+
+
+
+
+
                     }
                 });
+
+
+
+
+
+
+
+
 
 
 
