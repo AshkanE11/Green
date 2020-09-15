@@ -42,7 +42,7 @@ public class FactorScene extends Application {
 
     private static double xOffset = 0;
     private static double yOffset = 0;
-    public String additemname , additemprice , additemname2 , additemprice2 ;
+    public String additemname , additemprice ;
     public String dollarsign = "$" ;
     public Label itemshow , priceshow ;
     public TextField countshow ;
@@ -56,13 +56,14 @@ public class FactorScene extends Application {
     public TableView customertable = new TableView() ;
 
 
-    ObservableList<String> getoni = FXCollections.observableArrayList() ;
+    ObservableList<SearchResults> searchclone = FXCollections.observableArrayList() ;
     ObservableList<CustomerTable> customerclone = FXCollections.observableArrayList() ;
-
+    FilteredList<SearchResults> filteredData ;
 
     int itemcounter , factorcounter , customercounter ;
 
-    String searchedCustomer ;
+
+    SearchResults search ;
 
 
 
@@ -601,32 +602,37 @@ public class FactorScene extends Application {
 
 
 
-                    confirmbutton.setOnAction(e -> {
-
-
-                        additemname = productname.getText().toString();
-                        additemprice = dollarsign + productprice.getText().toString();
-
-
-                        additemname2 = productname.getText().toString() ;
-                        additemprice2 = dollarsign + productprice.getText().toString() ;
+                confirmbutton.setOnAction(e -> {
 
 
 
-                        searchresults.getItems().addAll(new SearchResults(additemname, additemprice));
-                        getoni.addAll(additemname2 , additemprice2) ;
 
 
-                        itemcounter ++;
 
 
-                        additemstage.close();
+                   additemname = productname.getText().toString();
+                   additemprice = dollarsign + productprice.getText().toString();
+
+
+
+
+
+                   search = new SearchResults(additemname , additemprice) ;
+                   searchclone.addAll(search) ;
+
+                   itemcounter ++ ;
+
+
+
+                   // Data Filtering
+                   filteredData = new FilteredList(searchclone, b -> true);
+
+
+
+                    additemstage.close();
 
 
                     });
-
-
-
 
 
 
@@ -871,6 +877,53 @@ public class FactorScene extends Application {
                         makefactorstackpane.getChildren().add(searchresults) ;
 
 
+                        // SearchBar Listener
+                        searchbar.textProperty().addListener((observable, oldValue, newValue) -> {
+
+                            // FilterData Predicate
+                            filteredData.setPredicate(ItemGuy -> {
+
+
+                                // If FilterList is Empty Show All Items
+
+                                if (newValue == null || newValue.isEmpty()) {
+                                    return true;
+                                }
+
+
+                                // Comparing Cells Data
+
+
+                                // LowerCaser
+                                String lowerCaseFilter = newValue.toLowerCase();
+
+
+                                if (ItemGuy.getItemName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // ItemName Match
+                                } else if (ItemGuy.getItemPrice().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // Itemprice Match
+                                } else if (String.valueOf(ItemGuy.getNumInfoLabel1()).indexOf(lowerCaseFilter) != -1)
+                                    return true; // ItemCount Match
+
+
+                                else
+                                    return false; // No Matches
+
+
+                            });
+                        });
+
+                        // Sort The FilteredData
+                        SortedList<SearchResults> sortedData = new SortedList(filteredData);
+
+                        // Comparator
+                        sortedData.comparatorProperty().bind(searchresults.comparatorProperty());
+
+
+                        // Finall Shot !!!
+                        searchresults.setItems(sortedData);
+                        searchresults.refresh();
+
                     }
                 });
 
@@ -959,7 +1012,6 @@ public class FactorScene extends Application {
             private double xOffset = 0 ;
             private double yOffset = 0 ;
             String fname , lname , phone , adress ;
-            String fname2 , lname2 , phone2 , adress2 ;
 
             @Override
             public void handle(MouseEvent event) {
@@ -1096,7 +1148,7 @@ public class FactorScene extends Application {
                         customersearchbar.textProperty().addListener((observable, oldValue, newValue) -> {
 
                             // FilterData Predicate
-                            filteredData.setPredicate(employee -> {
+                            filteredData.setPredicate(CustomerGuy -> {
 
 
                                 // If FilterList is Empty Show All Items
@@ -1114,21 +1166,21 @@ public class FactorScene extends Application {
                                 String lowerCaseFilter = newValue.toLowerCase();
 
 
-                                if (employee.getFirst().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                if (CustomerGuy.getFirst().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                                     return true; // FirstName Match
                                 }
 
 
-                                else if (employee.getLast().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                else if (CustomerGuy.getLast().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                                     return true; // LastName Match
                                 }
 
 
-                                else if (String.valueOf(employee.getPhone()).indexOf(lowerCaseFilter) != -1)
+                                else if (String.valueOf(CustomerGuy.getPhone()).indexOf(lowerCaseFilter) != -1)
                                     return true; //PhoneNumber Match
 
 
-                                else if (employee.getAdress().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                else if (CustomerGuy.getAdress().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                                     return true; // Adress Match
                                 }
 
