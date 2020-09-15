@@ -1376,7 +1376,25 @@
     -fx-prompt-text-alignment: center;
     -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
 
+}
 
+
+.bikersearchbar {
+
+
+    -fx-translate-x:  150px;
+    -fx-translate-y:  220px;
+    -fx-font-family: 'Julius Sans One', sans-serif;
+    -fx-font-size: 15px;
+    -fx-max-width: 300px;
+    -fx-max-height: 50px;
+    -fx-background-color: #5B6AF7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #4affcd;
+    -fx-text-alignment: center;
+    -fx-prompt-text-fill: #4affcd;
+    -fx-prompt-text-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgb(37, 46, 118), 6, 0, 0, 0);
 
 
 }
