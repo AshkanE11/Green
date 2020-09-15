@@ -4,6 +4,10 @@ package com.cloudly.aestudios;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -33,6 +37,10 @@ public class OrderScene extends Application {
     public TableView cartitems = new TableView() ;
     public TableView bikertable = new TableView() ;
 
+    public ObservableList<CustomerTable> bikersclone = FXCollections.observableArrayList() ;
+
+
+    int bikercounter ;
 
 
     @Override
@@ -802,6 +810,8 @@ public class OrderScene extends Application {
                 bikerlname.setPromptText("LastName");
                 bikerphone.setPromptText("Phone");
                 bikeradress.setPromptText("Adress");
+                TextField bikersearchbar = new TextField() ;
+                bikersearchbar.setPromptText("Search");
 
 
 
@@ -810,7 +820,7 @@ public class OrderScene extends Application {
 
 
                 StackPane ministackpane = new StackPane() ;
-                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , bikerfname , bikerlname , bikerphone , bikeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , bikertable) ;
+                ministackpane.getChildren().addAll(backgroundshow , navbarshow , exitbutton , minimizebutton , topiclabel , infolabel , bikerfname , bikerlname , bikerphone , bikeradress , donebutton , deslabel1 , deslabel2 , deslabel3 , deslabel4 , bikertable , bikersearchbar) ;
 
 
 
@@ -830,6 +840,7 @@ public class OrderScene extends Application {
                 deslabel3.getStyleClass().add("deslabel3") ;
                 deslabel4.getStyleClass().add("deslabel4") ;
                 bikertable.getStyleClass().add("customertable") ;
+                bikersearchbar.getStyleClass().add("bikersearchbar") ;
 
 
 
@@ -871,7 +882,13 @@ public class OrderScene extends Application {
 
 
 
-                        bikertable.getItems().add(new CustomerTable(fname , lname , phone , adress)) ;
+                        CustomerTable biker = new CustomerTable(fname , lname , phone , adress) ;
+                        bikersclone.addAll(biker) ;
+
+
+
+
+
 
 
 
@@ -879,6 +896,77 @@ public class OrderScene extends Application {
                         bikerlname.setText(null);
                         bikerphone.setText(null);
                         bikeradress.setText(null);
+
+                        bikercounter ++ ;
+
+
+
+                        // Data Filtering
+                        FilteredList<CustomerTable> filteredData = new FilteredList(bikersclone, b -> true);
+
+                        // SearchBar Listener
+                        bikersearchbar.textProperty().addListener((observable, oldValue, newValue) -> {
+
+                            // FilterData Predicate
+                            filteredData.setPredicate(BikerGuy -> {
+
+
+                                // If FilterList is Empty Show All Items
+
+                                if (newValue == null || newValue.isEmpty()) {
+                                    return true;
+                                }
+
+
+
+                                // Comparing Cells Data
+
+
+                                // LowerCaser
+                                String lowerCaseFilter = newValue.toLowerCase();
+
+
+                                if (BikerGuy.getFirst().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // FirstName Match
+                                }
+
+
+                                else if (BikerGuy.getLast().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // LastName Match
+                                }
+
+
+                                else if (String.valueOf(BikerGuy.getPhone()).indexOf(lowerCaseFilter) != -1)
+                                    return true; //PhoneNumber Match
+
+
+                                else if (BikerGuy.getAdress().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                                    return true; // Adress Match
+                                }
+
+
+                                else
+                                    return false; // No Matches
+
+
+                            });
+                        });
+
+                        // Sort The FilteredData
+                        SortedList<CustomerTable> sortedData = new SortedList<>(filteredData);
+
+                        // Comparator
+                        sortedData.comparatorProperty().bind(bikertable.comparatorProperty());
+
+
+
+                        // Finall Shot !!!
+                        bikertable.setItems(sortedData);
+                        bikertable.refresh();
+
+
+
+
 
 
                     }
