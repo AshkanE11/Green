@@ -28,9 +28,9 @@ public class Info extends Application {
 
 
 
-        Label scene1txt = new Label("Greetings To Cloudly !") ;
-        Label scene1txt2 = new Label("Cloudly, is delightful accounting conformity for inventory management roles and Functions.") ;
-        Label scene1txt3 = new Label("Cloudly is a further intelligent form of way and easement for administration") ;
+        Label scene1txt = new Label("Greetings To Green !") ;
+        Label scene1txt2 = new Label("Green, is delightful accounting conformity for inventory management roles and Functions.") ;
+        Label scene1txt3 = new Label("Green is a further intelligent form of way and easement for administration") ;
         Label scene1txt4 = new Label("and tiny corporations that wants to get more widely and extensively acquainted") ;
         Label scene1txt5 = new Label("by their business statics and attachments.") ;
         Button scene1rightbutton = new Button("") ;
@@ -61,11 +61,19 @@ public class Info extends Application {
         scene1txt4.getStyleClass().add("scene1txt4") ;
         scene1txt5.getStyleClass().add("scene1txt5") ;
 
+
+        Image icon = new Image("com//cloudly//aestudios//Files//Background//applicationicon.png") ;
+
+
+
+
         Scene infoscene = new Scene(infostackpane , 1200 , 700) ;
         infoscene.getStylesheets().add(getClass().getResource("Info.css").toExternalForm()) ;
 
         InfoStage.setScene(infoscene);
         InfoStage.setResizable(false);
+        InfoStage.getIcons().add(icon) ;
+        InfoStage.setTitle("Green");
         InfoStage.initStyle(StageStyle.UNDECORATED);
         InfoStage.show();
 
@@ -80,7 +88,7 @@ public class Info extends Application {
 
 
         Label scene2txt = new Label("Secure, Fast, Easy.") ;
-        Label scene2txt2 = new Label("Cloudly is a high formation vision from every business manager's.") ;
+        Label scene2txt2 = new Label("Green is a high formation vision from every business manager's.") ;
         Label scene2txt3 = new Label("and counselor's perspective. Whom") ;
         Label scene2txt4 = new Label("its a business survey which gives that peace of mind to users for using") ;
         Label scene2txt5 = new Label("it by their component for their professions.") ;
