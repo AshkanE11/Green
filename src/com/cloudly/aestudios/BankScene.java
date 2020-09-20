@@ -32,6 +32,7 @@ public class BankScene extends Application {
     Label datenumlabel2 , datecharlabel2 , amountnumlabel2 , amountcharlabel2 , personlabel2 ;
 
 
+    public static ImageView chequeshow ;
 
 
     @Override
@@ -74,8 +75,23 @@ public class BankScene extends Application {
         // STARTING SCENE BUILD  ...
 
 
-        Image cheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
-        ImageView chequeshow = new ImageView(cheque) ;
+        Image Melatcheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Ansarcheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Hasanecheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Keshavarzcheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Maskancheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Parsiancheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+        Image Samancheque = new Image("com/cloudly/aestudios/Files/Background/cheque.png") ;
+
+
+
+        Button bankSwitch1 = new Button("M") ;
+        Button bankSwitch2 = new Button("A") ;
+        Button bankSwitch3 = new Button("G") ;
+        Button bankSwitch4 = new Button("K") ;
+        Button bankSwitch5 = new Button("M") ;
+        Button bankSwitch6 = new Button("P") ;
+        Button bankSwitch7 = new Button("S") ;
 
 
         TextField chequedatenum = new TextField() ;
@@ -108,7 +124,7 @@ public class BankScene extends Application {
 
 
         StackPane bankstackpane = new StackPane() ;
-        bankstackpane.getChildren().addAll(mainbackgrounddisplay , mainlogodisplay , menubutton , exitbutton , minimizebutton , chequedatenum , chequedatechar , chequeamount , chequeamountchar , chequeperson , finishbutton , chequeshow , printbutton) ;
+        bankstackpane.getChildren().addAll(mainbackgrounddisplay , mainlogodisplay , menubutton , exitbutton , minimizebutton , chequedatenum , chequedatechar , chequeamount , chequeamountchar , chequeperson , finishbutton , printbutton , bankSwitch1 , bankSwitch2 , bankSwitch3 , bankSwitch4 , bankSwitch5 , bankSwitch6 , bankSwitch7 , chequeshow) ;
 
 
 
@@ -125,6 +141,13 @@ public class BankScene extends Application {
         finishbutton.getStyleClass().add("finishbutton") ;
         chequeshow.getStyleClass().add("chequeshow") ;
         printbutton.getStyleClass().add("printbutton") ;
+        bankSwitch1.getStyleClass().add("bankSwitch1") ;
+        bankSwitch2.getStyleClass().add("bankSwitch2") ;
+        bankSwitch3.getStyleClass().add("bankSwitch3") ;
+        bankSwitch4.getStyleClass().add("bankSwitch4") ;
+        bankSwitch5.getStyleClass().add("bankSwitch5") ;
+        bankSwitch6.getStyleClass().add("bankSwitch6") ;
+        bankSwitch7.getStyleClass().add("bankSwitch7") ;
 
 
 
@@ -135,6 +158,93 @@ public class BankScene extends Application {
         MainStage.setTitle("Green");
 
 
+
+
+
+        // Banks Changing ...
+
+
+        bankSwitch1.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Melatcheque) ;
+
+
+
+
+        });
+
+        bankSwitch2.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Ansarcheque) ;
+
+
+
+
+        });
+
+
+        bankSwitch3.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Hasanecheque) ;
+
+
+
+
+        });
+
+
+        bankSwitch4.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Keshavarzcheque) ;
+
+
+
+
+        });
+
+
+        bankSwitch5.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Maskancheque) ;
+
+
+
+
+        });
+
+
+        bankSwitch6.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Parsiancheque) ;
+
+
+
+
+        });
+
+
+        bankSwitch7.setOnAction(e -> {
+
+
+
+            chequeshow = new ImageView(Samancheque) ;
+
+
+
+
+        });
 
 
 
