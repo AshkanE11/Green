@@ -520,13 +520,11 @@ public class BankScene extends Application {
 
 
 
-
-
-            datenumlabel5.getStyleClass().add("datenumlabel1") ;
-            datecharlabel5.getStyleClass().add("datecharlabel1") ;
-            amountnumlabel5.getStyleClass().add("amountnumlabel1") ;
-            amountcharlabel5.getStyleClass().add("amountcharlabel1") ;
-            personlabel5.getStyleClass().add("personlabel1") ;
+            datenumlabel5.setStyle("-fx-translate-x: 40px; -fx-translate-y: -100px");
+            datecharlabel5.setStyle("-fx-translate-x: -60px; -fx-translate-y: -72px");
+            amountnumlabel5.setStyle("-fx-translate-x: -210px; -fx-translate-y: -12px");
+            amountcharlabel5.setStyle("-fx-translate-x: -380px; -fx-translate-y: 113px");
+            personlabel5.setStyle("-fx-translate-x: 0px; -fx-translate-y: 30px");
 
 
 
@@ -562,6 +560,13 @@ public class BankScene extends Application {
 
 
 
+            datenumlabel5.setStyle("-fx-translate-x: 40px; -fx-translate-y: -100px");
+            datecharlabel5.setStyle("-fx-translate-x: -60px; -fx-translate-y: -72px");
+            amountnumlabel5.setStyle("-fx-translate-x: -210px; -fx-translate-y: -12px");
+            amountcharlabel5.setStyle("-fx-translate-x: -380px; -fx-translate-y: 113px");
+            personlabel5.setStyle("-fx-translate-x: 0px; -fx-translate-y: 30px");
+
+
 
             datenumlabel5 = new Label() ;
             datecharlabel5 = new Label() ;
@@ -585,16 +590,6 @@ public class BankScene extends Application {
 
             bankstackpane.getChildren().addAll(datenumlabel5 , datecharlabel5 , amountnumlabel5 , amountcharlabel5 , personlabel5) ;
 
-
-
-
-
-
-            datenumlabel5.getStyleClass().add("datenumlabel1") ;
-            datecharlabel5.getStyleClass().add("datecharlabel1") ;
-            amountnumlabel5.getStyleClass().add("amountnumlabel1") ;
-            amountcharlabel5.getStyleClass().add("amountcharlabel1") ;
-            personlabel5.getStyleClass().add("personlabel1") ;
 
 
 
@@ -663,11 +658,11 @@ public class BankScene extends Application {
 
 
 
-            datenumlabel9.getStyleClass().add("datenumlabel1") ;
-            datecharlabel9.getStyleClass().add("datecharlabel1") ;
-            amountnumlabel9.getStyleClass().add("amountnumlabel1") ;
-            amountcharlabel9.getStyleClass().add("amountcharlabel1") ;
-            personlabel9.getStyleClass().add("personlabel1") ;
+            datenumlabel9.setStyle("-fx-translate-x: 40px; -fx-translate-y: -130px");
+            datecharlabel9.setStyle("-fx-translate-x: 0px; -fx-translate-y: -72px");
+            amountnumlabel9.setStyle("-fx-translate-x: -210px; -fx-translate-y: -12px");
+            amountcharlabel9.setStyle("-fx-translate-x: -390px; -fx-translate-y: 140px");
+            personlabel9.setStyle("-fx-translate-x: 0px; -fx-translate-y: 30px");
 
 
 
@@ -730,12 +725,11 @@ public class BankScene extends Application {
 
 
 
-            datenumlabel9.getStyleClass().add("datenumlabel1") ;
-            datecharlabel9.getStyleClass().add("datecharlabel1") ;
-            amountnumlabel9.getStyleClass().add("amountnumlabel1") ;
-            amountcharlabel9.getStyleClass().add("amountcharlabel1") ;
-            personlabel9.getStyleClass().add("personlabel1") ;
-
+            datenumlabel9.setStyle("-fx-translate-x: 40px; -fx-translate-y: -130px");
+            datecharlabel9.setStyle("-fx-translate-x: 0px; -fx-translate-y: -72px");
+            amountnumlabel9.setStyle("-fx-translate-x: -210px; -fx-translate-y: -12px");
+            amountcharlabel9.setStyle("-fx-translate-x: -450px; -fx-translate-y: 90px");
+            personlabel9.setStyle("-fx-translate-x: 0px; -fx-translate-y: 30px");
 
 
 
