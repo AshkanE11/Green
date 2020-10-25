@@ -36,8 +36,10 @@ public class OrderScene extends Application {
     public TableView searchresults = new TableView() ;
     public TableView cartitems = new TableView() ;
     public TableView bikertable = new TableView() ;
+    public TableView editabletable = new TableView() ;
 
     public ObservableList<CustomerTable> bikersclone = FXCollections.observableArrayList() ;
+    public ObservableList<CartItems> editableitems = FXCollections.observableArrayList() ;
 
 
     int bikercounter ;
@@ -85,6 +87,32 @@ public class OrderScene extends Application {
 
 
 
+        TableColumn<String , CartItems> ItemRowColumn = new TableColumn<>() ;
+        TableColumn<String , CartItems> PriceRowColumn = new TableColumn<>() ;
+        TableColumn<String , CartItems> CountRowColumn = new TableColumn<>() ;
+
+
+
+
+        ItemRowColumn.setCellValueFactory(new PropertyValueFactory<>("ItemName"));
+        PriceRowColumn.setCellValueFactory(new PropertyValueFactory<>("ItemPrice"));
+        CountRowColumn.setCellValueFactory(new PropertyValueFactory<>("ItemCount"));
+
+        ItemRowColumn.setMinWidth(100);
+        PriceRowColumn.setMinWidth(100);
+        CountRowColumn.setMinWidth(100);
+
+
+        editabletable.setPlaceholder(new Label("No Items Added To Cart !!!"));
+        editabletable.getColumns().addAll(ItemRowColumn , PriceRowColumn , CountRowColumn) ;
+
+
+
+
+        // Bikers Table
+
+
+
         TableColumn<String , FactorScene.SearchResults> customercolumn1 = new TableColumn<>("First") ;
         TableColumn<String , FactorScene.SearchResults> customercolumn2 = new TableColumn<>("Last") ;
         TableColumn<String , FactorScene.SearchResults> customercolumn3 = new TableColumn<>("Phone") ;
@@ -102,6 +130,8 @@ public class OrderScene extends Application {
 
         bikertable.getColumns().addAll(customercolumn1 , customercolumn2 , customercolumn3 , customercolumn4) ;
         bikertable.setPlaceholder(new Label("No Bikers"));
+
+
 
 
 
@@ -430,24 +460,15 @@ public class OrderScene extends Application {
                 ImageView mininavdisplay = new ImageView(mininav) ;
                 mininavdisplay.setFitWidth(600);
                 mininavdisplay.setFitHeight(60);
-                Label topiclabel = new Label("add item") ;
-                Label txtlabel1 = new Label("Name: ") ;
-                Label txtlabel2 = new Label("Price: ") ;
-                TextField productname = new TextField() ;
-                TextField productprice = new TextField() ;
-                productname.setPromptText("Name");
-                productprice.setPromptText("Price");
-                Button confirmbutton = new Button("Confirm") ;
-                ImageView loveshow = new ImageView(loveicon) ;
-                loveshow.setFitWidth(200);
-                loveshow.setFitHeight(200);
+                Label topiclabel = new Label("Edit Items") ;
+
 
 
 
 
 
                 StackPane additemstackpane = new StackPane() ;
-                additemstackpane.getChildren().addAll(minibackgrounddisplay , mininavdisplay , exitbuttonmini , minimizebuttonmini , topiclabel , productname , productprice , txtlabel1 , txtlabel2 , confirmbutton , loveshow) ;
+                additemstackpane.getChildren().addAll(minibackgrounddisplay , mininavdisplay , exitbuttonmini , minimizebuttonmini , topiclabel, editabletable) ;
 
 
 
@@ -457,13 +478,7 @@ public class OrderScene extends Application {
                 exitbuttonmini.getStyleClass().add("exitbuttonmini") ;
                 minimizebuttonmini.getStyleClass().add("minimizebuttonmini") ;
                 topiclabel.getStyleClass().add("topiclabel") ;
-                productname.getStyleClass().add("productname") ;
-                productprice.getStyleClass().add("productprice") ;
-                txtlabel1.getStyleClass().add("txtlabel1") ;
-                txtlabel2.getStyleClass().add("txtlabel2") ;
-                confirmbutton.getStyleClass().add("confirmbutton") ;
-                loveshow.getStyleClass().add("loveshow") ;
-
+                editabletable.getStyleClass().add("cartitems") ;
 
 
 
@@ -477,50 +492,6 @@ public class OrderScene extends Application {
                 additemstage.setTitle("New Item");
                 additemstage.initStyle(StageStyle.UNDECORATED);
                 additemstage.show();
-
-
-
-
-
-
-                // ADD ITEM EVENT HANDELERS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**************************************************
-
-
-
-
-
-
-
-
-                confirmbutton.setOnAction(e -> {
-
-
-                    additemname = productname.getText().toString() ;
-                    additemprice = dollarsign + productprice.getText().toString() ;
-
-
-
-
-
-
-                    additemstage.close();
-
-
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
