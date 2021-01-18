@@ -29,7 +29,7 @@ which wants to get more widely and extensively acquainted by their business stat
 [x] Source Based Login Form </br>
 [x] Items &&& Customers Organizing </br>
 [x] Printing Cart Items </br>
--- Cheque Organizer &&& Scheduler </br>
+[x] Cheque Organizer &&& Scheduler </br>
 
 </br>
 
