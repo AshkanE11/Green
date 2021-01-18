@@ -27,8 +27,8 @@ which wants to get more widely and extensively acquainted by their business stat
 
 [x] Page Instructs &&& Hints </br>
 [x] Source Based Login Form </br>
--- Items &&& Customers Organizing </br>
--- Printing Cart Items </br>
+[x] Items &&& Customers Organizing </br>
+[x] Printing Cart Items </br>
 -- Cheque Organizer &&& Scheduler </br>
 
 </br>
